@@ -1,0 +1,380 @@
+html {
+	font-family: 'PT Sans Caption', sans-serif;/*Подключаем шрифт*/
+	font-size: 16px;/*Базовый размер шрифта */
+	line-height: 1.5;/*Базовая высота строчки*/
+	min-width: 280px;/*Если ширина смартфона меньше 280px добавляется прокрутка*/
+}
+
+/*У всех картинок убираются лишние отступы*/
+img {
+	display: inline-block; /*display - определяет, как элемент должен быть показан в документе*/
+}
+
+a {
+	transition: 0.3s ease-out; /*Плавный переход*/
+}
+
+/** {
+	box-sizing: border-box;    не подключаю это потому, что возникают проблемы с подвалом (моя ошибка)
+}
+*/
+
+
+/*
+font-family: 'Merriweather', serif;
+font-family: 'PT Sans Caption', sans-serif;
+*/
+
+
+	/* ...........................
+		GRID (сетка)
+	............................. */
+	.container {
+		width: 1140px;/*Ширина элемента*/
+		margin-left: auto;/*Автаматический отступ слева*/
+		margin-right: auto;/*Автаматический отступ справа*/
+	}
+
+	.row {
+
+	}
+
+   
+	.colonka {
+		width: 360px;/*Ширина элемента*/
+		margin-right: 30px;/*Автаматический отступ справа*/
+		float: left;/*Колонки обтикают друг друга слева*/
+	}
+	.colonka:last-child /*Последняя колонка*/{
+		margin-right: 0px;/*Автаматический отступ справа*/
+	}
+
+	.colonka:first-child /*Первая колонка*/{
+		margin-right: 30px;/*Автаматический отступ справа*/
+	}
+
+
+	/* ...........................
+		 HEADER
+	............................. */
+.header {
+	background: #343c4e;/*Цвет фона*/
+	background-image: url("https://www.notik.ru/content/img/1590125432_01-laptop-for-coding.jpg");/*Фон картинка*/
+	background-repeat: no-repeat;/*Фон не повторять*/
+	background-position: center;/*Фон в центр*/
+	background-size: cover;/*Фон в размер на всю страницу*/
+
+	height: 100vh;/*Фон в размер %*/
+	min-height: 400px;/*Минимальная высота 400px (не объязательно)*/
+
+	color: #FFF;/*Цвет*/
+	text-align: : center;/*Определяет горизонтальное выравнивание текста*/
+
+	/*Текст по центру*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/*...............*/
+}
+
+.header_title {
+	font-size: 56px;/*Размер текста*/
+	margin-bottom: 30px;/*Определяет нижний отступ для элемента*/
+	font-family:'Merriweather', serif;/*Подключаем шрифт*/
+	margin-top: -50px;/*Определяет верхний отступ для элемента*/
+}
+
+.header_slogan {
+	font-size: 25px;/*Размер текста*/
+	line-height: 42px;/*Определяет высоту строки*/
+}
+
+.header_arrow {
+	font-size: 48px;/*Размер текста*/
+	position: absolute; /*Используется для позиционирования (относительно окна браузера или других объектов на веб-странице) элемента*/
+	bottom: 50px; /*Отступ снизу*/
+	left: 50%; /*Отступ слева*/
+}
+
+
+	/* ...........................
+		PORTFOLIO   	
+	............................. */
+
+	.portfolio {
+		padding-top: 40px;/*Задает пустое верхнее поле для элемента*/
+		padding-bottom: 100px;/*Задает пустое нижние поле для элемента*/
+	}
+
+	/*На случай если я захочу сделать второй ряд работ*/
+	.portfolio_item {
+		margin-bottom: 20px;/*Определяет нижний отступ для элемента*/
+	/*................................................*/
+	}
+
+	.title {
+		font-size: 46px;/*Размер текста*/
+		margin-bottom: 60px;/*Определяет нижний отступ для элемента*/
+		margin-top: 10px;/*Определяет верхний отступ для элемента*/
+		font-family: 'Merriweather', serif;/*Подключаем шрифт*/
+		text-align: center;/*Определяет горизонтальное выравнивание текста*/
+
+	}
+
+	.portfolio-item_img {
+		margin-bottom: 17px;/*Определяет нижний отступ для элемента*/
+	}
+
+	/*Правильное маштабирование картинок на смартфонах*/
+
+	.portfolio-item_img img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.portfolio-item_title {
+		font-size: 24px;/*Размер текста*/
+		line-height: normal;/*Определяет высоту строки*/
+		margin-bottom: 5px;/*Определяет нижний отступ для элемента*/
+	}
+	/*Ссылки*/
+	.portfolio-item_title a {
+		text-decoration: none;/*Определяет оформление текста (убирает стандартную полосу внизу ссылки)*/
+		color: #000;/*Цвет*/
+		border-bottom: 1px solid #FFF /*#000*/;/*Создаем свое нижние подчеркивание*/
+	}
+
+	.portfolio-item_text {
+		font-size: 16px;/*Размер текста*/
+		line-height: 1.5;/*Определяет высоту строки*/
+	}
+
+	.portfolio-item_title a:hover { /*hover - псевдо елемент который отвечает за происходяшие после навидения на любой элемент курсором */
+		color: #0052C2;/*Цвет*/
+		border-color: #0052C2;/*Цвет созданного нами нижнего подчеркивания*/
+	}
+
+	/*Порагрофы*/
+	.portfolio-item_text p {
+		margin-top: 0px;/*Определяет верхний отступ для элемента*/
+		margin-bottom: 15px;/*Определяет нижний отступ для элемента*/
+		padding-bottom: 100px;/*Задает нижние поле для элемента*/
+		margin-bottom: 15px;/*Определяет нижний отступ для элемента*/
+		/*.........*/
+	}
+
+	/* ...........................
+		PORTFOLIO SINGL PADGE	
+	............................. */
+	.portfolio-singl-padge {
+		padding-top: 50px;/*Задает верхнее поле для элемента(внутринний отступ)*/
+		padding-bottom: 50px;/*Задает нижние поле для элемента (внутринний отступ)*/
+		text-align: center;/*Определяет горизонтальное выравнивание текста*/
+
+	}
+
+	.portfolio-singl-padge img {
+		margin-bottom: 50px; /*Определяет нижний отступ для элемента*/
+		max-height: 100%;/*Для коректного изображентя картинки на телефонах*/
+		height: auto;/*Для коректного изображентя картинки на телефонах*/
+	}
+
+	.button-back {
+		font-weight: 700;/*Oпределяет насыщенность (толщину) символов в тексте*/
+		text-decoration: none;/*Убираем подчеркивания*/
+		color: #0052C2;/*Цвет*/
+		text-transform: uppercase;/*Трансформируем текст в больши буквы*/
+		letter-spacing: 1.6px;/*Расстояние между буквами*/
+
+		display: inline-block; /*display - определяет, как элемент должен быть показан в документе*/
+
+		border-width: 2px;/*Задаем ширину рамки*/
+		border-color: #0052C2;/*Цвет рамки*/
+		border-style: solid;/*Задаем стиль рамки - непрерывная линия*/
+		border-radius: 50px;/*Задаем скругления уголков рамки*/
+
+		/*Отступы*/
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-left: 23px;
+		padding-right: 23px;
+
+		margin-bottom: 13px;
+
+		transition: 0.3s ease-out; /*Плавный переход*/
+		/*........*/
+	}
+
+	.button-back:hover {
+		color: #FFF;/*Цвет текста*/
+		background-color: #0052C2;/*Цвет фона*/
+	}
+
+
+
+	/* ...........................
+		FOOTER
+	............................. */
+
+	.footer {
+
+	background-color: #061634;/*Цвет фона*/
+	margin-top:350px;/*Определяет верхний отступ для элемента*/
+    height: 100px;/*Определяет высоту элемента*/
+    position: absolute;/*Используется для позиционирования (относительно окна браузера или других объектов на веб-странице) элемента*/
+    width: 100%;/*Определяет ширину элемента*/
+    padding-top: 90px;/*Задает верхнее поле для элемента*/
+    padding-bottom: 190px;/*Задает нижние поле для элемента*/
+
+    color: #6479a2;/*Цвет текста*/
+
+	}
+
+
+	.footer p {
+		margin-top: 0px;/*Определяет верхний отступ для элемента*/
+		margin-bottom: 15px;/*Определяет нижний отступ для элемента*/
+	}
+
+	p.footer_name {
+		font-size: 28px;/*Размер шрифта */
+		margin-bottom: 10px;/*Определяет нижний отступ для элемента*/
+		line-height: normal;/*Определяет высоту строки*/
+		font-family: 'Merriweather', serif;/*Подключаем шрифт*/
+	}
+
+	p.footer_social {
+		color: #FFF;/*Цвет шрифта текста над значками*/
+	}
+	
+	p.footer_social_icons {
+		color: #FFF;/*Задаем цвет у значков*/ /*Не работает потому что ссылки подсвечиваются синим цветом автоматически*/
+		font-size: 32px;/*Размер шрифта иконок*/
+	}
+
+	p.footer_social_icons a {
+		color: #FFF;/*Задаем цвет у ссылок*/
+		margin-right: 30px;/*Добавляет отступ справа*/
+		transition: 0.3s ease-out; /*Плавный переход*/
+	}
+
+	p.footer_social_icons a:last-child {
+		margin-right: 0px;/*Обнуляет отступ справа*/
+	}
+
+	p.footer_social_icons a:hover { /*hover - псевдо елемент который отвечает за происходяшие после навидения на любой элемент курсором */
+		color: #FFE400;/*Цвет*/
+	}
+
+
+	.button {
+		font-weight: 700;/*Oпределяет насыщенность (толщину) символов в тексте*/
+		text-decoration: none;/*Убираем подчеркивания*/
+		color: #FFF;/*Цвет*/
+		text-transform: uppercase;/*Трансформируем текст в больши буквы*/
+		letter-spacing: 1.6px;/*Расстояние между буквами*/
+
+		display: inline-block; /*display - определяет, как элемент должен быть показан в документе*/
+
+		border-width: 2px;/*Задаем ширину рамки*/
+		border-color: #FFF;/*Цвет рамки*/
+		border-style: solid;/*Задаем стиль рамки - непрерывная линия*/
+		border-radius: 50px;/*Задаем скругления уголков рамки*/
+
+		/*Отступы*/
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-left: 23px;
+		padding-right: 23px;
+
+		margin-bottom: 13px;
+
+		transition: 0.3s ease-out; /*Плавный переход*/
+		/*........*/
+	}
+
+	.button:hover {
+		color: #061634;/*Цвет текста*/
+		background-color: #FFF;/*Цвет фона*/
+	}
+
+
+	/* ...........................
+		NEDIA
+	............................. */
+
+	/*При ширине экрана в 1160px и менее - будет выполнен медиа запрос*/
+	@media (max-width: 1160px) {
+
+		.container {
+			width: 100%;/*Ширина кантейнера 100 %*/
+		}
+
+		.colonka {
+			width: 100%;/*Ширина колонок 100 %*/
+
+			/*Ряльная ширина = width: 100% + border: 0px + padding: 15px + 15px  =  окно браузера и с права 30px */
+
+			/*Избавляемся от 30px с права*/
+
+			box-sizing: border-box;/*box-sizing: border-box  -  убирает от блока размер border и padding (лучше писать в начале, что я и сделал)*/
+
+			/*...........................*/
+
+			margin: 0;/*Обнуляем все отступы*/
+			margin-bottom: 0px;/*Определяет нижний отступ для элемента*/
+
+			/*Отступы с права и с лева для смартфонов*/
+			padding-left: 15px;
+			padding-right: 15px;
+			/*........................................*/
+
+			text-align:center;/*Определяет горизонтальное выравнивание текста*/
+		}
+
+		.footer {
+			margin-top:1250px;/*Определяет верхний отступ для элемента*/
+			height: 415px;/*Определяет высоту элемента*/
+		}
+
+		/*Добавляем отступы в шапке чтобы текст не прилегал к краям*/
+
+		.header {
+			padding-left: 15px;
+			padding-right: 15px;
+
+		}
+
+		/*Уменьшаем текст и пробелы*/
+
+		.header_title {
+			font-size: 38px;
+			line-height: 48px;
+			margin-bottom: 15px;
+		}
+
+		.header_slogan {
+			font-size: 22px;
+			line-height: 38px;
+		}
+
+		.portfolio {
+			padding-top: 40px;
+			padding-bottom: 50px;
+		}
+
+		.title {
+			font-size: 36px;
+		}
+
+		.footer {
+			padding-top: 70px;
+			padding-bottom: 60px;
+		}
+
+		/*..........................*/
+	}
+
+
+
